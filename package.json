@@ -1,0 +1,14 @@
+{
+  "name": "honeydew_look_up",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "1.0.0",
+  "description": "Lookity Look Up",
+  "main": "app.js",
+  "author": "vincecarollo <vincecarollo@gmail.com>",
+  "license": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
