@@ -15,6 +15,7 @@ router.post('/',
           res.json({ message: 'Look up failed' })
         })
     } else {
+      res.status(404)
       res.json({ message: 'No term given' })
     }
   }
