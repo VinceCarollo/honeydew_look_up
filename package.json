@@ -2,7 +2,7 @@
   "name": "honeydew_look_up",
   "scripts": {
     "start": "node src/app.js",
-    "test": "mocha"
+    "test": "jest"
   },
   "version": "1.0.0",
   "description": "Lookity Look Up",
@@ -10,12 +10,16 @@
   "author": "vincecarollo <vincecarollo@gmail.com>",
   "license": "",
   "dependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "got": "^11.6.2",
-    "mocha": "^8.1.3"
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2"
   },
-  "devDependencies": {}
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
 }
