@@ -6,6 +6,8 @@ const Lookup = require('./api/v1/Lookup')
 
 app.use('/api/v1/lookup', Lookup)
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
 })
+
+module.exports = server
