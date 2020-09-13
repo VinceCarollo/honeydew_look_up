@@ -8,9 +8,12 @@ router.post('/',
     if (req.body.term) {
       await LookupService.companyLookup(req.body.term)
         .then((companyInfo) => res.json(companyInfo))
-        .catch(() => res.json({ message: 'Look up failed' }))
+        .catch(() => {
+          res.status(404)
+          res.json({ message: 'Look up failed' })
+        })
     } else {
-      res.json({ message: 'Look up failed' })
+      res.json({ message: 'No term given' })
     }
   }
 )
