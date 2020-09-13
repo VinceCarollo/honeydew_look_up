@@ -1,7 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const LookupService = require('../services/LookupService')
+const LookupService = require('../../services/LookupService')
 router.use(express.json())
+
+// api/v1/lookup
 
 router.post('/',
   async (req, res) => {
