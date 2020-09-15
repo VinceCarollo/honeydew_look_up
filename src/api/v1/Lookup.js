@@ -7,6 +7,7 @@ router.use(express.json())
 
 router.post('/',
   async (req, res) => {
+    console.log(req.body)
     if (req.body.term) {
       await LookupService.companyLookup(req.body.term)
         .then((companyInfo) => res.json(companyInfo))
